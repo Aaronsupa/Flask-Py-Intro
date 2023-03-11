@@ -1,6 +1,8 @@
-<!DOCTYPE html>
-<html>
-    <body>
-        {%block content%}{%endblock%}
-    </body>
-</html>
+{% extends "shop.html" %}
+{% block content %}
+<h1>{{ menu }}</h1>
+<p>Types of {{ menu }}: {{ types | length }}</p>
+{% for type in types %}
+<p>{{ type }}</p>
+{% endfor %}
+{% endblock %}

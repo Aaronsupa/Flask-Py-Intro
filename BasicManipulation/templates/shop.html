@@ -1,17 +1,15 @@
 <!DOCTYPE html>
 <hmtl>
 <head>
-
+    <title></title>
 </head>
 <body>
     {% block content %}
         <h1>Taco Shop</h1>
         <p>Welcome to my taco shop! Below is the menu</p>
-        <ul>
-            <li>{{ menu[0] }}</li>
-            <li>{{ menu[1] }}</li>
-            <li>{{ menu[2] }}</li>
-        </ul>
+        <p><a href="/index/0">{{ menu[0] }}</a></p>
+        <p><a href="/index/1">{{ menu[1] }}</a></p>
+        <p><a href="/index/2">{{ menu[2] }}</a></p>
     {% endblock %}
 </body>
 </html>
