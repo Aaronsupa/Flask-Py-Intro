@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <hmtl>
 <head>
-    <title></title>
+    <link rel = "stylesheet" href = "shopstyle.css">
 </head>
 <body>
     {% block content %}
         <h1>Taco Shop</h1>
         <p>Welcome to my taco shop! Below is the menu</p>
-        <p><a href="/index/0">{{ menu[0] }}</a></p>
-        <p><a href="/index/1">{{ menu[1] }}</a></p>
-        <p><a href="/index/2">{{ menu[2] }}</a></p>
+        {% for id, item in menu.items() %}
+            <p><a href="/index/{{id}}">{{ item }}</a></p>
+        {% endfor %}
+    
     {% endblock %}
 </body>
 </html>

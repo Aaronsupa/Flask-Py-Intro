@@ -1,7 +1,13 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
+from flask_wtf import FlaskForm
+from wtforms import StringField, SubmitField
+
 app = Flask(__name__)
+app.config["SECRET_KEY"] = "my_secret"
+
 menu = {0: 'Tacos', 1: 'Fajitas', 2: 'Enchiladas'}
 types = {0: ['Beef', 'Chicken', 'Brisket'], 1: ['Chicken', 'Cheese'], 2: ['Beef', 'Chicken', 'Cheese and Cream']}
+
 @app.route('/')
 @app.route('/shop')
 def shop():
