@@ -1,0 +1,16 @@
+{% extends "shop.html" %}
+{% block content %}
+<table>
+    <tr>
+    {% for x in range(menu.items() | length) %}
+    <th>{{ menu[x] }}</th>
+    {% endfor %}
+    </tr>
+    <tr>
+    {% for x in range(Cals.items() | length) %}
+    <td>{{ Cals[x] }}</td>
+    {% endfor %}
+    </tr>
+
+</table>
+{% endblock %}

@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <hmtl>
 <head>
-    <link rel = "stylesheet" href = "shopstyle.css">
 </head>
 <body>
     {% block content %}
@@ -10,6 +9,7 @@
         {% for id, item in menu.items() %}
             <p><a href="/index/{{id}}">{{ item }}</a></p>
         {% endfor %}
+        <p><a href = "/nutrition"> Nutrition facts</a></p>
     
     {% endblock %}
 </body>
